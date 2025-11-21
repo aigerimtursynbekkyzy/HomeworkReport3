@@ -1,0 +1,224 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
+\addbibresource{ref.bib}
+% Adjust margins here
+
+\geometry{left=3cm, right=3cm, top=3cm, bottom=3cm, headheight=15pt}
+\addtolength{\topmargin}{-2.5pt}
+% Increase bottom margin to lower page numbering
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[L]{MATH 323: Actuarial Mathematics I  } % left header
+\fancyhead[R]{Homework Report #1} % right header
+\fancyfoot[C]{\thepage} % center footer
+\renewcommand{\headrulewidth}{0.4pt} % header rule width
+\renewcommand{\footrulewidth}{0.4pt} % footer rule width
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    
+    \vspace*{0.5cm}
+    
+    {\Large\bfseries MATH 323: Actuarial Mathematics I\par}
+    
+    \vspace{1cm}
+    
+    {\large Homework Report #1\par}
+    
+    \vspace{0.5cm}
+    
+    {\today\par}
+    
+    \vspace{1pt}
+    
+    \includegraphics[width=0.3\textwidth]{NU-logo.png}\\
+    \includegraphics[width=0.15\textwidth]{sosah-logo.png}
+
+    \vspace{0.5cm}
+    
+    Submitted for {\bf MATH 323: Actuarial Mathematics I} at the School of Sciences and Humanities, Department of Mathematics, Nazarbayev University
+    
+    \vspace{0.5cm}
+    
+    {\large Student Name:\par}
+    \begin{itemize}[leftmargin=5cm,rightmargin=4cm]
+        \item  xxxxxxxxxxx - ID: 202031896
+    \end{itemize}
+
+    \vspace{0.5cm}
+    
+    \flushleft{
+  Subject Area: {\bf Theory of Interest} \\
+  Description: {\bf Homework Problems in Chapter 1 and Chapter 22 \\
+  Course Instructor : {\bf Dongming Wei} \\
+    }
+    
+    \vspace{0.5cm}
+    
+    {\footnotesize In submitting this work we are indicating
+    that we have read the University's Academic Integrity Policy. We
+    declare that all material in this assessment is our own work except
+    where there is clear acknowledgment and reference to the work of
+    others.\par}
+\end{titlepage}
+The following is the used as solutions samples for each problem:
+\newpage
+\section*{Problems}
+\subsection*{Question 1, Section 2, Chapter 2  (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Dina Kalibekova}\\
+
+\noindent Five cards are dealt from a standard 52-card deck. What is the probability that the sum of the faces on the five cards is 48 or more?
+
+
+\subsection*{Question 2, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Zhannur Kazenov}\\
+
+\noindent Dana is not the world’s best poker player. Dealt a 2 of diamonds, an 8 of diamonds, an ace of hearts, an ace of clubs, and an ace of spades, she discards the three aces. What are her chances of drawing to a flush?
+
+\subsection*{Question 3, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Alina Abdrakhmanova}\\
+
+\noindent Tim is dealt a 4 of clubs, a 6 of hearts, an 8 of hearts, a 9 of hearts, and a king of diamonds. He discards the 4 and the king. What are his chances of drawing to a straight flush? To a flush?
+
+
+\subsection*{Question 4, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Akbota Assainova}\\
+
+A poker player is dealt a 7 of diamonds, a queen of diamonds, a queen of hearts, a queen of clubs, and an ace of hearts. He discards the 7. What is his probability of drawing to either a full house or four-of-a-kind?
+
+
+\subsection*{Question 5, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Dariya Kalymova}\\
+
+\noindent A bridge hand (thirteen cards) is dealt from a stan dard 52-card deck. Let A be the event that the hand contains four aces; let B be the event that the hand contains four kings. Find
+\begin{math}
+ P(A \cup B).
+ \end{math}\par 
+
+\newpage
+
+\section*{Solutions}
+
+\subsection*{Question 1, Section 2, Chapter 2  (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Dina Kalibekova}\\
+
+\noindent The number of ways that five cards are dealt from a standard 52-card deck is:
+$$
+    C=\frac{52!}{5!(52-5)!}= 2598960
+$$
+4 cards which contain the number 10 and one card which contains 9:
+$$
+    (1\times4)+(4\times6)+(4\times1)=32
+$$
+The probability that the sum of the faces on the five cards is 48 or more is:
+$$
+   P(Sum \ \ is \ \ 48 \ \ or \ \ more) = \frac{m}{n} = \frac{32}{2598960},$$
+\newline
+where m - The number of ways of selecting the sum of the faces and n - Total number of ways
+\newline
+Therefore, the probability that the sum of the faces on the five cards is 48 or more is:
+
+    $$\frac{32}{2598960}$$
+
+\subsection*{Question 2, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Zhannur Kazenov}\\
+
+\noindent To get a flush, Dana needs to draw any 3 of the remaining 11 diamonds. Since only 47 cards are effectively left in the deck (others may already have been dealt, but their identities are unknown), 
+\newline P(Dana draws to flush) = P(A)
+\[
+    P(A) =\frac{\binom{11}{3}}{\binom{47}{3}}=0.0101758
+\]
+\subsection*{Question 3, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Alina Abdrakhmanova}\\
+
+\noindent Tim is dealt a 4 of a clubs, 8 of hearts, 9 of hearts, and king of diamonds. So, he has been dealt 5 cards and there are 47 cards remaining in the deck. To get a straight flush, Tim needs to have all the cards of the same suit and in sequence. He has 3 hearts in hand that can be made into sequence if 7 of hearts is added to it. Then another 1 card is needed (either 5 or 10 of hearts). \newline
+7 of hearts can be drawn in \begin{equation}
+    \binom{1}{1}
+\end{equation} ways. \newline
+Any of 5 or 10 of hearts can be drawn in \begin{equation}
+    \binom{2}{1}
+\end{equation} ways. \newline
+Let A be an event that a straight flush is drawn. \newline
+Then probability of it happening is: \begin{equation}
+    P(A) =\frac{\binom{1}{1}\binom{2}{1}}{\binom{47}{2}}
+\end{equation} \newline
+To get a flush, which is when all cards are of the same suit and not necessarily in sequence, Tim needs to choose 2 more cards from of hearts. He can do it in $\binom{10}{2}$ ways. It includes 2 cards that will make a sequence a \textbf{straight flush}. So total number of ways to get a flush is $\binom{10}{2}-2$. \newline
+Let B be an event that flush is drawn.
+Then probability of it happening is: \begin{equation}
+    P(A) =\frac{\binom{10}{2}-2}{\binom{47}{2}}
+\end{equation}
+\subsection*{Question 4, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Akbota Assainova}\\
+
+\noindent Firstly, let's discuss about the cases of full house or four-of-a-kind to solve this problem. 
+\newline 
+\textbf{Four of kind:} 
+a hand where four of the cards are with the same rank and another one with different rank. \textit{Example:} $K\varheartsuit, K\spadesuit, K\clubsuit, K\vardiamondsuit, A\vardiamondsuit$
+\newline
+\textbf{full house:} 
+ a hand of 5 cards representing two cards with the same rank and another three cards with another same rank. \textit{Example:} $Q\varheartsuit, Q\spadesuit, Q\clubsuit, K\spadesuit, K\clubsuit$ 
+\newline
+Now, we can solve the problem itself.
+\newline
+There are 52 cards in a deck, 4 of each type.
+The poker playeralina.abdra16@gmail.com has 5 cards, leaving 47 in the deck.
+To get a full house he needs one more ace. there are 3 left in the deck.
+To get a 4 of a kind he needs one more queen. there is only one left in the deck.
+\newline
+There are 3 aces, so three of those circumstances. there are 47 cards remaining in the deck, so there is a total of 47 circumstances. the probability of a full house is $P_{full house}=\frac{3}{47}$.
+\newline
+The same thing applies to the four-of-a-kind. There is only 1 queen left, so just one of those circumstances, and there are 47 cards, so 47 possible circumstances. the probability of getting a four-of-a-kind is $P_{four-of-a-kind}=\frac{1}{47}$
+\newline
+Thus, the final probability is: 
+\newline 
+P(draws to full house or four-of-a-kind)$=P_{full-house} + P_{four-of-a-kind}$
+\newline
+P(draws to full house or four-of-a-kind)$=\frac{3}{47}+\frac{1}{47}=\frac{4}{47}$
+
+
+\subsection*{Question 5, Section 2, Chapter 2 (\cite{boyce11th})}
+
+\noindent\textbf{Assigned to Dariya Kalymova}\\
+
+\noindent A bridge hand (thirteen cards) is dealt from a stan dard 52-card deck. Let A be the event that the hand contains four aces; let B be the event that the hand contains four kings. Find
+\begin{math}
+ P(A \cup B).
+ \end{math}
+\newline
+\textit{\textbf{Solution:}}
+\begin{math}
+ P(A) = \frac{\binom{4}{4} \binom{48}{9}}{\binom{52}{13}}.\newline 
+  P(B) = \frac{\binom{4}{4} \binom{48}{9}}{\binom{52}{13}}.\newline
+   P(A \cap B) = \frac{\binom{4}{4} \binom{4}{4} \binom{44}{5}}{\binom{52}{13}}.\newline
+  P(A \cup B) = P(A) + P(B)- P(A \cap B) = \frac{4 669 920}{1512}
+\end{math}
+
+\newpage
+\printbibliography
+\end{document}
