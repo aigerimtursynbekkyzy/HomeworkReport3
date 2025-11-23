@@ -386,6 +386,636 @@ The following is the used as solutions samples for each problem:
 
 \subsection*{Question 1, Section 2, Chapter 6  (\cite{toi3rd})}
 
+\noindent We have a zero-coupon bond that pays \$1000 in 10 years.  
+If the annual effective yield rate is $i$, the price $P$ is
+\[
+  P = \frac{1000}{(1+i)^{10}}.
+\]
+
+\begin{enumerate}
+  \item For $i = 0.10$,
+  \[
+    P_{10\%} = \frac{1000}{1.10^{10}}
+      \approx \frac{1000}{2.59374246}
+      \approx 385.54.
+  \]
+  So the price is approximately \$385.54.
+
+  \item For $i = 0.09$,
+  \[
+    P_{9\%} = \frac{1000}{1.09^{10}}
+      \approx \frac{1000}{2.366531}
+      \approx 422.41.
+  \]
+  So the price is approximately \$422.41.
+
+  \item The percentage increase in price when the yield drops from 10\% to 9\% is
+  \[
+    \frac{P_{9\%} - P_{10\%}}{P_{10\%}} \times 100\%
+      = \frac{422.41 - 385.54}{385.54}\times 100\%
+      \approx 9.56\%.
+  \]
+
+\subsection*{Question 3, Section 2, Chapter 6  (\cite{toi3rd})}
+
+\noindent A 26-week T-bill is bought for \$9600 and matures at \$10\,000.
+
+\begin{enumerate}
+  \item \textbf{Discount rate (T-bill convention).}
+
+  The bank discount rate $d$ uses a 360-day year and the face value in the denominator:
+  \[
+    d
+      = \frac{F - P}{F} \cdot \frac{360}{\text{days to maturity}}.
+  \]
+  With $F = 10000$, $P = 9600$, and $26$ weeks $\approx 182$ days,
+  \[
+    d
+      = \frac{10000-9600}{10000} \cdot \frac{360}{182}
+      = 0.04 \cdot \frac{360}{182}
+      \approx 0.0791.
+  \]
+  So the annual discount rate is about $7.91\%$.
+
+  \item \textbf{Annual effective yield rate.}
+
+  The holding-period yield over half a year is
+  \[
+    i_{0.5} = \frac{F}{P} - 1 = \frac{10000}{9600} - 1 = \frac{1}{24} \approx 0.041667.
+  \]
+  The annual effective yield is
+  \[
+    i_{\text{eff}}
+      = (1 + i_{0.5})^2 - 1
+      = \left(\frac{25}{24}\right)^2 - 1
+      \approx 1.08507 - 1
+      \approx 0.0851.
+  \]
+  So the annual effective rate is approximately $8.51\%$.
+\end{enumerate}
+
+   \subsection*{Question 5, Section 3, Chapter 6  (\cite{toi3rd})}
+
+\noindent  Both bonds have par value \$1000, the same maturity, and yield a nominal
+rate of 4\% convertible semiannually.  
+Thus the yield per half-year is
+\[
+  j = \frac{0.04}{2} = 0.02.
+\]
+
+Let $n$ be the number of half-year periods to maturity.
+
+\medskip
+\textbf{Step 1: Determine $n$ from the first bond.}
+
+First bond: coupon rate 5\% nominal payable semiannually.  
+Coupon per half-year:
+\[
+  C_1 = \frac{0.05}{2} \cdot 1000 = 25.
+\]
+Its price is \$1136.78, so
+\[
+  1136.78
+    = 25\,a_{\angl{n}}^{(j)} + 1000(1+j)^{-n},
+\]
+where
+\[
+  a_{\angl{n}}^{(j)} = \frac{1-(1+j)^{-n}}{j}.
+\]
+
+Solving this equation numerically gives
+\[
+  n \approx 40.
+\]
+Thus the term is about $40$ half-year periods, or $20$ years.
+
+\medskip
+\textbf{Step 2: Price of the second bond.}
+
+Second bond: coupon rate $2\tfrac12\%$ nominal, payable semiannually.  
+Coupon per half-year:
+\[
+  C_2 = \frac{0.025}{2} \cdot 1000 = 12.50.
+\]
+
+At the same yield $j=0.02$ and with $n=40$,
+\[
+  P_2 = 12.5\,a_{\angl{40}}^{(0.02)} + 1000(1.02)^{-40}.
+\]
+
+Compute:
+\[
+  a_{\angl{40}}^{(0.02)} = \frac{1-1.02^{-40}}{0.02},
+\]
+so numerically
+\[
+  P_2 \approx 794.83.
+\]
+
+Therefore, the price of the second bond is approximately \$794.83.
+
+   \subsection*{Question 8, Section 3, Chapter 6  (\cite{toi3rd})}
+
+\noindent Current yield rates are 7\% nominal convertible semiannually, so the
+yield per half-year is
+\[
+  j = \frac{0.07}{2} = 0.035.
+\]
+
+\medskip
+\textbf{Step 1: Price received for the existing 10\% bond.}
+
+Par value \$1000; coupon rate 10\% nominal, semiannual coupons.  
+Coupon per half-year:
+\[
+  C_1 = \frac{0.10}{2}\cdot 1000 = 50.
+\]
+The bond has 10 years to maturity, i.e.\ $n_1 = 20$ half-year periods.
+
+The price is
+\[
+  P_1 = 50\,a_{\angl{20}}^{(0.035)} + 1000(1.035)^{-20}.
+\]
+
+With
+\[
+  a_{\angl{20}}^{(0.035)} = \frac{1-1.035^{-20}}{0.035},
+\]
+we find
+\[
+  P_1 \approx 1213.19.
+\]
+
+\medskip
+\textbf{Step 2: Par value of the new 6\% bond.}
+
+Let $X$ be the par value of the new bond.  
+Coupon rate 6\% nominal, semiannual coupons, so coupon per period is
+\[
+  C_2 = \frac{0.06}{2} X = 0.03X.
+\]
+The new bond has 8 years to maturity, i.e.\ $n_2 = 16$ half-year periods,
+and is priced to yield the same $j=0.035$.
+
+So its price is
+\[
+  P_2 = 0.03X\,a_{\angl{16}}^{(0.035)} + X(1.035)^{-16}.
+\]
+
+All proceeds from selling the old bond are used to buy this new bond, so
+\[
+  P_2 = P_1.
+\]
+Thus
+\[
+  0.03X\,a_{\angl{16}}^{(0.035)} + X(1.035)^{-16} = 1213.19.
+\]
+
+Factor $X$:
+\[
+  X\left[0.03\,a_{\angl{16}}^{(0.035)} + (1.035)^{-16}\right] = 1213.19.
+\]
+
+Compute the bracketed term:
+\[
+  a_{\angl{16}}^{(0.035)} = \frac{1-1.035^{-16}}{0.035},
+\]
+and numerically
+\[
+  0.03\,a_{\angl{16}}^{(0.035)} + (1.035)^{-16} \approx 0.9394.
+\]
+
+Therefore
+\[
+  X = \frac{1213.19}{0.9394} \approx 1291.27.
+\]
+
+So the par value of the 8-year bond is approximately \$1291.27.
+
+subsection*{Question 10, Section 3, Chapter 6  (\cite{toi3rd})}
+
+\noindent We use the data from Example 6.3:
+
+\[
+\begin{aligned}
+F &= 1000, \\
+C &= 1050, \\
+\text{coupon rate} &= 8.4\% \text{ nominal, semiannual}, \\
+r &= \frac{0.084}{2} = 0.042, \\
+\text{coupon each half-year} &= Fr = 1000(0.042)=42, \\
+i &= \frac{0.10}{2}=0.05\quad \text{(yield per half-year)},\\
+n &= 20 \quad\text{(10 years, semiannual)}, \\
+K &= 1050(1.05)^{-20} = 395.7340, \\
+G &= \frac{0.042}{0.05}(1000)=840.
+\end{aligned}
+\]
+
+The price (computed in Example 6.3) is
+\[
+P = 919.15.
+\]
+
+\bigskip
+\textbf{(a) Nominal yield based on par value}
+
+\[
+\text{Nominal yield on par} = \frac{\text{annual coupon}}{\text{par value}}
+= \frac{0.084\cdot 1000}{1000} = 0.084 = 8.4\%.
+\]
+
+\bigskip
+\textbf{(b) Nominal yield based on redemption value}
+
+\[
+\text{Nominal yield on redemption value}
+  = \frac{\text{annual coupon}}{\text{redemption value}}
+  = \frac{84}{1050}
+  = 0.08 = 8\%.
+\]
+
+\bigskip
+\textbf{(c) Current yield}
+
+\[
+\text{Current yield} = \frac{\text{annual coupon}}{P}
+= \frac{84}{919.15}
+\approx 0.0914
+= 9.14\%.
+\]
+
+\bigskip
+\textbf{(d) Yield to maturity}
+
+The yield to maturity was given in Example 6.3 as 10\% nominal convertible semiannually, i.e.
+\[
+i_{\text{YTM}} = 10\% \quad \text{(nominal, convertible semiannually)}.
+\]
+
+The effective annual yield corresponding to this is
+\[
+i_{\text{eff}} = (1.05)^2 - 1 = 0.1025 = 10.25\%.
+\]
+
+\bigskip
+\[
+\boxed{
+\begin{aligned}
+\text{(a)}\;& 8.4\% \\
+\text{(b)}\;& 8\% \\
+\text{(c)}\;& 9.14\% \\
+\text{(d)}\;& \text{YTM} = 10\% \text{ nominal (convertible semiannually)}
+\end{aligned}}
+\]
+
+    \subsection*{Question 11, Section 4, Chapter 6  (\cite{toi3rd})}
+
+\noindent Consider a \$1 par bond with yield rate per period $i$ and $n$ periods
+to redemption.
+
+Let $a_{\angl{n}}$ denote the present value of an $n$-period annuity
+immediate at rate $i$:
+\[
+  a_{\angl{n}} = \frac{1-v^n}{i}, \qquad v = \frac{1}{1+i}.
+\]
+
+We use the standard identity for a par bond:
+\[
+  i\,a_{\angl{n}} + v^n = 1.   \tag{$\ast$}
+\]
+
+\medskip
+\textbf{First bond.}
+
+Coupon rate is $1.5i$ (150\% of the yield rate) on par 1, so coupon per
+period is $1.5i$.
+
+Price $P_1$:
+\[
+  P_1 = 1.5i\,a_{\angl{n}} + v^n = 1 + p.
+\]
+
+Using $(\ast)$, we write
+\[
+  P_1 = 1.5i\,a_{\angl{n}} + v^n
+      = (i\,a_{\angl{n}} + v^n) + 0.5i\,a_{\angl{n}}
+      = 1 + 0.5i\,a_{\angl{n}}.
+\]
+Hence
+\[
+  1 + p = 1 + 0.5i\,a_{\angl{n}}
+  \quad\Rightarrow\quad
+  p = 0.5\,i\,a_{\angl{n}}.
+\]
+Therefore
+\[
+  i\,a_{\angl{n}} = 2p.
+\]
+
+\medskip
+\textbf{Second bond.}
+
+Coupon rate is $0.75i$ (75\% of the yield rate) on par 1, so coupon per
+period is $0.75i$.
+
+Price $P_2$:
+\[
+  P_2 = 0.75i\,a_{\angl{n}} + v^n.
+\]
+Again using $(\ast)$,
+\[
+  P_2 = (i\,a_{\angl{n}} + v^n) - 0.25i\,a_{\angl{n}}
+      = 1 - 0.25i\,a_{\angl{n}}.
+\]
+
+Substitute $i\,a_{\angl{n}} = 2p$:
+\[
+  P_2 = 1 - 0.25\cdot 2p = 1 - \frac{p}{2}.
+\]
+
+\textbf{Hence, the price of the second bond as a function of $p$ is}
+\[
+  \boxed{P_2 = 1 - \dfrac{p}{2}}.
+\]
+
+\subsection*{Question 13, Section 4, Chapter 6  (\cite{toi3rd})}
+
+\noindent We are given:
+
+\begin{itemize}
+    \item A 10-year bond with semiannual coupons $\Rightarrow n = 20$ coupon periods.
+    \item Yield rate: $9\%$ nominal convertible semiannually $\Rightarrow i = 0.09/2 = 0.045$ per period.
+    \item The bond is bought at a \emph{discount}, so the book value is increasing.
+    \item The amount of accumulation of discount in the next-to-last coupon (period 19) is \$8.
+\end{itemize}
+
+\bigskip
+\textbf{Key fact from amortization theory:}
+
+For a bond bought at a discount, the \emph{accumulation of discount} in period $t$ is
+\[
+D_t = i(B_t - C/i)
+\]
+but more simply, for a bond amortized by the \emph{constant-yield method}, the sequence of discount accumulations satisfies
+\[
+D_t = D_1(1+i)^{\,t-1}.
+\]
+
+We are told that
+\[
+D_{19} = 8.
+\]
+
+Thus,
+\[
+D_{19} = D_1(1.045)^{18} = 8.
+\]
+
+\textbf{Solve for $D_1$:}
+\[
+D_1 = \frac{8}{(1.045)^{18}}.
+\]
+
+Compute:
+\[
+(1.045)^{18} \approx 2.208039,
+\qquad
+D_1 \approx \frac{8}{2.208039} \approx 3.625.
+\]
+
+\bigskip
+\textbf{We need total accumulation of discount during the first four years.}
+
+Four years means $8$ semiannual periods.
+
+Thus,
+\[
+\text{Total discount accumulated in periods 1--8}
+= \sum_{t=1}^{8} D_t
+= D_1 \sum_{t=0}^{7} (1.045)^t.
+\]
+
+The geometric sum is
+\[
+\sum_{t=0}^{7} (1.045)^t = \frac{1.045^{8} - 1}{0.045}.
+\]
+
+Compute:
+\[
+1.045^8 \approx 1.42328,
+\qquad
+\frac{1.42328 - 1}{0.045} \approx \frac{0.42328}{0.045} \approx 9.4062.
+\]
+
+Therefore,
+\[
+\text{Total discount} = D_1 (9.4062) \approx 3.625(9.4062) \approx 34.11.
+\]
+
+\bigskip
+\[
+\boxed{\text{Total accumulation of discount in the first four years } \approx \$34.11.}
+\]
+
+   \subsection*{Question 14, Section 4, Chapter 6  (\cite{toi3rd})}
+
+\noindent We are given:
+
+\begin{itemize}
+    \item Par value: $F = 1000$.
+    \item Term: 5 years with semiannual coupons $\Rightarrow n = 10$ periods.
+    \item Coupon rate: $10\%$ nominal, semiannual.
+          Thus coupon each period:
+          \[
+            C = \frac{0.10}{2} \cdot 1000 = 50.
+          \]
+    \item Yield rate: $12\%$ nominal, convertible semiannually.
+          Thus yield per period:
+          \[
+            i = \frac{0.12}{2} = 0.06.
+          \]
+    \item The bond is redeemable at par at maturity.
+\end{itemize}
+
+\bigskip
+\textbf{Price of the bond.}
+
+\[
+P = 50\,a_{\angl{10}}^{(0.06)} + 1000(1.06)^{-10}.
+\]
+
+Compute:
+\[
+a_{\angl{10}}^{(0.06)} = \frac{1-1.06^{-10}}{0.06}
+= \frac{1-0.558394}{0.06}
+= 7.3601.
+\]
+
+Thus:
+\[
+50(7.3601) = 368.005,
+\]
+\[
+1000(1.06)^{-10} = 1000(0.558394) = 558.394.
+\]
+
+Therefore:
+\[
+P = 368.005 + 558.394 = 926.399.
+\]
+So the purchase price is approximately
+\[
+P \approx 926.40.
+\]
+
+\bigskip
+\textbf{Total interest paid (total yield interest).}
+
+In the amortization schedule, “interest paid” each period equals:
+\[
+\text{Interest}_t = i \cdot B_{t-1},
+\]
+where $B_{t-1}$ is the beginning book value.
+
+But the \emph{sum} of all interest entries in the amortization schedule has a standard closed-form:
+
+\[
+\text{Total interest paid}
+= (F - P).
+\]
+
+This identity follows because, over the life of a bond under constant yield amortization,
+\[
+\text{Total coupon payments}
+= \text{Accumulated discount} + \text{Interest paid},
+\]
+and ending book value equals redemption value.
+
+More directly:
+\[
+\text{Total yield interest}
+= \sum_{t=1}^{n} i B_{t-1}
+= F - P.
+\]
+
+Thus:
+\[
+\text{Total interest paid}
+= 1000 - 926.40 = 73.60.
+\]
+
+\bigskip
+\[
+\boxed{\text{Total interest paid in the amortization schedule } \approx \$73.60.}
+\]
+
+\subsection*{Question 16, Section 4, Chapter 6  (\cite{toi3rd})}
+
+\noindent \textbf{Given tables:}
+
+\begin{itemize}
+    \item Table 6.2: Bond amortization schedule for a \$1000 two-year bond with 8\% semiannual coupons, bought to yield 6\% semiannually. \\
+    Premium amortized each period (true values): 8.88,\; 9.15,\; 9.43,\; 9.71.
+    \item Table 6.3: Bond amortization schedule for the same bond bought to yield 10\% semiannually. \\
+    Discount accumulated each period (true values): 8.23,\; 8.64,\; 9.07,\; 9.52.
+\end{itemize}
+
+For both tables the number of periods is $n = 4$.
+
+The straight-line method distributes the \emph{total premium} or \emph{total discount} evenly over all periods.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(a) Straight-line book values for Table 6.2}
+
+From Table 6.2:
+
+\[
+\text{Total premium amortized} = 37.17.
+\]
+
+Straight-line amortization per period:
+
+\[
+A = \frac{37.17}{4} = 9.2925.
+\]
+
+Book values under straight-line:
+
+\[
+B_t = B_0 - tA,
+\qquad B_0 = 1037.17.
+\]
+
+Thus:
+
+\[
+\begin{aligned}
+B_1 &= 1037.17 - 9.2925 = 1027.8775, \\
+B_2 &= 1037.17 - 2(9.2925) = 1018.5850, \\
+B_3 &= 1037.17 - 3(9.2925) = 1009.2925, \\
+B_4 &= 1037.17 - 4(9.2925) = 1000.00.
+\end{aligned}
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(b) Straight-line book values for Table 6.3}
+
+From Table 6.3:
+
+\[
+\text{Total discount accumulated} = 35.46.
+\]
+
+Straight-line discount accumulation per period:
+
+\[
+A = \frac{35.46}{4} = 8.865.
+\]
+
+Book values under straight-line:
+
+\[
+B_t = B_0 + tA,
+\qquad B_0 = 964.54.
+\]
+
+Thus:
+
+\[
+\begin{aligned}
+B_1 &= 964.54 + 8.865 = 973.405, \\
+B_2 &= 964.54 + 2(8.865) = 982.270, \\
+B_3 &= 964.54 + 3(8.865) = 991.135, \\
+B_4 &= 964.54 + 4(8.865) = 1000.00.
+\end{aligned}
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(c) Comparison with the true values}
+
+\textbf{Table 6.2 (premium case):}
+
+Straight-line amortization ($9.2925$ per period) differs from the true amortization (8.88, 9.15, 9.43, 9.71).  
+The true premium amortization \emph{increases} each period, whereas straight-line keeps it constant.
+
+Thus, straight-line book values are:
+\[
+B_t^{\text{SL}} \;\text{slightly above early true values and slightly below later true values.}
+\]
+
+\textbf{Table 6.3 (discount case):}
+
+Straight-line discount accumulation ($8.865$ per period) differs from true values (8.23, 8.64, 9.07, 9.52).  
+The true discount accumulation \emph{increases} each period, while straight-line keeps it constant.
+
+Thus, straight-line book values:
+\[
+B_t^{\text{SL}} \;\text{underestimate early true values and overestimate later true values.}
+\]
+
+\bigskip
+\textbf{Conclusion:}  
+The straight-line method does not accurately follow the true pattern of book values because the constant-yield method causes amortization to change each period. Straight-line values are only approximate, not exact.
+
 
 \newpage
 \printbibliography
